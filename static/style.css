@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+}
+
+.card,
+.result {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 220px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #555;
+}
+
+button {
+    margin-top: 15px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #222;
+    color: white;
+}
+
+.clear-btn {
+    background: #777;
+    margin-left: 10px;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.result {
+    display: none;
+}
+
+#prediction {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.confidence {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.probabilities > div {
+    margin-bottom: 20px;
+}
+
+.progress {
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+#fakeBar {
+    background: #e74c3c;
+}
+
+#realBar {
+    background: #2ecc71;
+}
+
+#fakeProbability {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#realProbability {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .card,
+    .result {
+        padding: 20px;
+    }
+
+    textarea {
+        height: 180px;
+    }
+}

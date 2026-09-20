@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Fake News Detector</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>AI Fake News Detection System</h1>
+
+            <p>
+                Detect whether a news article appears REAL or FAKE
+                using Machine Learning and NLP.
+            </p>
+        </div>
+
+
+        <div class="card">
+
+            <label for="newsText">
+                Enter News Article
+            </label>
+
+            <textarea
+                id="newsText"
+                placeholder="Paste your news article here..."
+            ></textarea>
+
+            <button onclick="checkNews()">
+                Check News
+            </button>
+
+            <button class="clear-btn" onclick="clearNews()">
+                Clear
+            </button>
+
+        </div>
+
+
+        <div id="loading" class="loading">
+            Analyzing news...
+        </div>
+
+
+        <div id="result" class="result">
+
+            <h2 id="prediction"></h2>
+
+            <div class="confidence">
+                Confidence:
+                <span id="confidence"></span>
+            </div>
+
+            <div class="probabilities">
+
+                <div>
+                    <strong>Fake Probability</strong>
+
+                    <div class="progress">
+                        <div id="fakeBar"></div>
+                    </div>
+
+                    <span id="fakeProbability"></span>
+                </div>
+
+
+                <div>
+                    <strong>Real Probability</strong>
+
+                    <div class="progress">
+                        <div id="realBar"></div>
+                    </div>
+
+                    <span id="realProbability"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
